@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amoreco</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        /* Estilos para mudar a posição dos botões quando 'Não' é clicado */
+        .shifted .buttons {
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="form-container" class="container">
+    <h1>Quer me dar?</h1>
+    <div class="buttons">
+        <button onclick="handleClick('sim')">Sim</button>
+        <button onclick="handleClick('nao')">Não</button>
+    </div>
+</div>
+
+<script>
+    function handleClick(choice) {
+        if (choice === 'sim') {
+            // Redireciona para o vídeo no YouTube
+            window.location.href = "https://www.youtube.com/shorts/GLYBsfHERQA"; // Exemplo de link
+        } else if (choice === 'nao') {
+            // Recarrega a página com os botões em outra posição
+            const container = document.getElementById('form-container');
+            container.classList.add('shifted');
+        }
+    }
+</script>
+
+</body>
+</html>
